@@ -12,4 +12,6 @@ DB_NAME=test-quizz
 DB_PORT=3307
 PORT=3200
 
-3 - npm run dev
+3 - npm run build
+
+4 - npm run dev
