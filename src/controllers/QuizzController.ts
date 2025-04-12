@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import QuizzService from "../services/Quizz";
+import QuizzService from "../services/QuizzService";
 
 class QuizzController {
 

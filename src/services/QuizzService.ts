@@ -1,5 +1,5 @@
 import Quizz from "../models/Quizz";
-import QuizzRepository from "../repositories/Quizz";
+import QuizzRepository from "../repositories/QuizzRepository";
 
 class QuizzService {
 
