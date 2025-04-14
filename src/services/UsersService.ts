@@ -1,12 +1,12 @@
 import Users from "../models/Users";
-import UserRepository from "../repositories/Users";
+import UsersRepository from "../repositories/UsersRepository";
 
 class UsersService {
 
-    private userRepository: UserRepository;
+    private userRepository: UsersRepository;
 
     constructor() {
-        this.userRepository = new UserRepository();
+        this.userRepository = new UsersRepository();
     }
 
     public async getAll(): Promise<Users[]> {

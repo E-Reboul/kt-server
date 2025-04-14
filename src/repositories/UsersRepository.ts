@@ -1,7 +1,7 @@
 import Users from "../models/Users";
 import executeQuery from "../utils/executeQuery";
 
-class UserRepository {
+class UsersRepository {
   constructor() {}
 
   public async getAll(): Promise<Users[]> {
@@ -37,4 +37,4 @@ class UserRepository {
   }
 }
 
-export default UserRepository;
+export default UsersRepository;
