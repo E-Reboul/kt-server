@@ -100,7 +100,7 @@ class QuestionController {
         }
     }
 
-    public async filterQuestionsByQuizz(req: Request, res: Response): Promise<void> {
+    public async getQuestionsByQuizz(req: Request, res: Response): Promise<void> {
         const quizzId = parseInt(req.params.id, 10);
 
         if (isNaN(quizzId)) {
@@ -109,7 +109,7 @@ class QuestionController {
         }
 
         try {
-            const questions = await this.questionService.filterQuestionsByQuizz(quizzId);
+            const questions = await this.questionService.getQuestionsByQuizz(quizzId);
             res.status(200).json(questions);
         } catch (error) {
             console.error('Failed to retrieve all questions:', error);

@@ -36,7 +36,7 @@ class QuestionRepository {
     return result.affectedRows > 0;
   }
 
-  public async filterQuestionsByQuizz(idQuizz: number): Promise<Question[]> {
+  public async getQuestionsByQuizz(idQuizz: number): Promise<Question[]> {
     const rows = await executeQuery("SELECT * FROM questions WHERE id_quizz = ?", [idQuizz]);
     return rows.map((row: object) => new Question(row));
   }

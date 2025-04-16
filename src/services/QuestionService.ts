@@ -85,9 +85,9 @@ class QuestionService {
         }
     }
 
-    public async filterQuestionsByQuizz(idQuizz: number): Promise<Question[]> {
+    public async getQuestionsByQuizz(idQuizz: number): Promise<Question[]> {
         try {
-            const rows = await this.questionRepository.filterQuestionsByQuizz(idQuizz);
+            const rows = await this.questionRepository.getQuestionsByQuizz(idQuizz);
             if (rows.length === 0) return [];
 
             return rows;
