@@ -9,7 +9,7 @@ class OrganisationsController {
         this.organisationsService = new OrganisationsService();
     }
 
-    public async getAllOrganisations(req: Request, res: Response): Promise<void> {
+    public async getAll(req: Request, res: Response): Promise<void> {
         try {
             const organisations = await this.organisationsService.getAll();
             res.status(200).json(organisations);
@@ -19,7 +19,7 @@ class OrganisationsController {
         }
     }
 
-    public async getOrganisationById(req: Request, res: Response): Promise<void> {
+    public async getById(req: Request, res: Response): Promise<void> {
         const organisationId = parseInt(req.params.id, 10);
         if (isNaN(organisationId)) {
             res.status(400).json({ message: 'ID organisation invalide.' });
@@ -39,7 +39,7 @@ class OrganisationsController {
         }
     }
 
-    public async createOrganisation(req: Request, res: Response): Promise<void> {
+    public async create(req: Request, res: Response): Promise<void> {
         const organisationData = req.body;
 
         try {
@@ -55,7 +55,7 @@ class OrganisationsController {
         }
     }
 
-    public async updateOrganisation(req: Request, res: Response): Promise<void> {
+    public async update(req: Request, res: Response): Promise<void> {
         const organisationId = parseInt(req.params.id, 10);
         if (isNaN(organisationId)) {
             res.status(400).json({ message: 'ID organisation invalide.' });
@@ -77,7 +77,7 @@ class OrganisationsController {
         }
     }
 
-    public async deleteOrganisation(req: Request, res: Response): Promise<void> {
+    public async delete(req: Request, res: Response): Promise<void> {
         const organisationId = parseInt(req.params.id, 10);
         if (isNaN(organisationId)) {
             res.status(400).json({ message: 'ID organisation invalide.' });

@@ -5,10 +5,10 @@ const organisationsController = new OrganisationsController();
 
 const organisationsRoute = Router();
 
-organisationsRoute.get("/", organisationsController.getAllOrganisations.bind(organisationsController));
-organisationsRoute.get("/:id", organisationsController.getOrganisationById.bind(organisationsController));
-organisationsRoute.post("/", organisationsController.createOrganisation.bind(organisationsController));
-organisationsRoute.put("/:id", organisationsController.updateOrganisation.bind(organisationsController));
-organisationsRoute.delete("/:id", organisationsController.deleteOrganisation.bind(organisationsController));
+organisationsRoute.get("/", organisationsController.getAll.bind(organisationsController));
+organisationsRoute.get("/:id", organisationsController.getById.bind(organisationsController));
+organisationsRoute.post("/", organisationsController.create.bind(organisationsController));
+organisationsRoute.put("/:id", organisationsController.update.bind(organisationsController));
+organisationsRoute.delete("/:id", organisationsController.delete.bind(organisationsController));
 
 export default organisationsRoute;
