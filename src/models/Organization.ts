@@ -1,4 +1,4 @@
-class Organisations {
+class Organizations {
     id?: number;
     name?: string;
     email?: string;
@@ -6,7 +6,7 @@ class Organisations {
     about_us?: string;
     created_at?: Date;
 
-    constructor(data?: Partial<Organisations>) {
+    constructor(data?: Partial<Organizations>) {
         Object.assign(this, data);
     }
 
@@ -59,4 +59,4 @@ class Organisations {
     }
 }
 
-export default Organisations;
+export default Organizations;
