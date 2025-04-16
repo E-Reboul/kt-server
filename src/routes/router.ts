@@ -1,6 +1,6 @@
 import { Router } from "express";
 import usersRoute from "./users";
-import organisationsRoute from "./organisations";
+import organisationsRoute from "./organization";
 const router = Router();
 
 router.use("/users", usersRoute);

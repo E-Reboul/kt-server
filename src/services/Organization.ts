@@ -1,5 +1,5 @@
-import Organisations from "../models/Organisations";
-import OrganisationRepository from "../repositories/Organisations";
+import Organisations from "../models/Organization";
+import OrganisationRepository from "../repositories/Organization";
 
 class OrganisationsService {
 

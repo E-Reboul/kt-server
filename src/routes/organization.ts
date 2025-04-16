@@ -1,5 +1,5 @@
 import { Router } from "express";
-import OrganisationsController from "../controllers/Organisations";
+import OrganisationsController from "../controllers/Organization";
 
 const organisationsController = new OrganisationsController();
 

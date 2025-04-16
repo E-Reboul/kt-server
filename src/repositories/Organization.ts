@@ -1,4 +1,4 @@
-import Organisations from "../models/Organisations";
+import Organisations from "../models/Organization";
 import executeQuery from "../utils/executeQuery";
 
 class OrganisationRepository {
