@@ -5,10 +5,10 @@ const charactersController = new CharactersController();
 
 const charactersRoute = Router();
 
-charactersRoute.get("/", charactersController.getAllCharacters.bind(charactersController));
-charactersRoute.get("/:id", charactersController.getCharacterById.bind(charactersController));
-charactersRoute.post("/", charactersController.createCharacter.bind(charactersController));
-charactersRoute.put("/:id", charactersController.updateCharacter.bind(charactersController));
-charactersRoute.delete("/:id", charactersController.deleteCharacter.bind(charactersController));
+charactersRoute.get("/", charactersController.getAll.bind(charactersController));
+charactersRoute.get("/:id", charactersController.getById.bind(charactersController));
+charactersRoute.post("/", charactersController.create.bind(charactersController));
+charactersRoute.put("/:id", charactersController.update.bind(charactersController));
+charactersRoute.delete("/:id", charactersController.delete.bind(charactersController));
 
 export default charactersRoute;
