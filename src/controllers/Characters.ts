@@ -9,7 +9,7 @@ class CharactersController {
         this.charactersService = new CharactersService();
     }
 
-    public async getAllCharacters(req: Request, res: Response): Promise<void> {
+    public async getAll(req: Request, res: Response): Promise<void> {
         try {
             const characters = await this.charactersService.getAll();
             res.status(200).json(characters);
@@ -19,7 +19,7 @@ class CharactersController {
         }
     }
 
-    public async getCharacterById(req: Request, res: Response): Promise<void> {
+    public async getById(req: Request, res: Response): Promise<void> {
         const characterId = parseInt(req.params.id, 10);
         if (isNaN(characterId)) {
             res.status(400).json({ message: 'ID personnage invalide.' });
@@ -39,7 +39,7 @@ class CharactersController {
         }
     }
 
-    public async createCharacter(req: Request, res: Response): Promise<void> {
+    public async create(req: Request, res: Response): Promise<void> {
         const characterData = req.body;
 
         try {
@@ -55,7 +55,7 @@ class CharactersController {
         }
     }
 
-    public async updateCharacter(req: Request, res: Response): Promise<void> {
+    public async update(req: Request, res: Response): Promise<void> {
         const characterId = parseInt(req.params.id, 10);
         if (isNaN(characterId)) {
             res.status(400).json({ message: 'ID personnage invalide.' });
@@ -77,7 +77,7 @@ class CharactersController {
         }
     }
 
-    public async deleteCharacter(req: Request, res: Response): Promise<void> {
+    public async delete(req: Request, res: Response): Promise<void> {
         const characterId = parseInt(req.params.id, 10);
         if (isNaN(characterId)) {
             res.status(400).json({ message: 'ID personnage invalide.' });
