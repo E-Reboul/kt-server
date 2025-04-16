@@ -1,5 +1,5 @@
 import { Router } from "express";
-import CharactersController from "../controllers/Characters";
+import CharactersController from "../controllers/Character";
 
 const charactersController = new CharactersController();
 

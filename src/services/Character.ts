@@ -1,5 +1,5 @@
-import Characters from "../models/Characters";
-import CharacterRepository from "../repositories/Characters";
+import Characters from "../models/Character";
+import CharacterRepository from "../repositories/Character";
 
 class CharactersService {
 

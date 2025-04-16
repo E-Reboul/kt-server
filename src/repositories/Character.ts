@@ -1,4 +1,4 @@
-import Characters from "../models/Characters";
+import Characters from "../models/Character";
 import executeQuery from "../utils/executeQuery";
 
 class CharacterRepository {

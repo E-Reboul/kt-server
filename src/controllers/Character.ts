@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import CharactersService from "../services/Characters";
+import CharactersService from "../services/Character";
 
 class CharactersController {
 
