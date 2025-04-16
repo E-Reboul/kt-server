@@ -2,7 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import router from "./src/routes/router";
 
-dotenv.config({ path: `.env.${process.env.NODE_ENV}` });
+dotenv.config({ path: ".env.dev" });
 
 const PORT = process.env.PORT || 6525;
 
